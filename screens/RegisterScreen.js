@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity, Pressable } from 'react-native'
 import React, { useState } from 'react'
 
 export default function RegisterScreen() {
@@ -38,11 +38,19 @@ export default function RegisterScreen() {
                 </TouchableOpacity>
             </View>
 
+            {/* Agreement with Radio button */}
+            
+            <Pressable style={styles.registerBtn}><Text style={styles.registerText}>Register Now</Text></Pressable>
+            <View style={styles.login}>
+                <Text style={styles.loginDisc}>Already have an account?</Text>
+                <Text style={styles.loginText}>Sign In Here</Text>
+            </View>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
+
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -54,7 +62,7 @@ const styles = StyleSheet.create({
     image: {
         height: 200,
         width: 200,
-        marginTop: -150
+        marginTop:-30
     },
 
     caption: {
@@ -82,7 +90,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontFamily: 'Poppins',
         color: '#333',
-        marginTop: 50,
+        marginTop: 40,
         marginLeft: -273
     },
 
@@ -143,18 +151,56 @@ const styles = StyleSheet.create({
         marginLeft: -230
     },
 
-    toggleButton:{
-        width:60,
-        height:48
+    toggleButton: {
+        width: 60,
+        height: 48
     },
 
-    toggleText:{
-        fontSize:12,
+    toggleText: {
+        fontSize: 12,
         fontFamily: 'Poppins',
         color: 'gray',
-        fontWeight:700,
-        position:'absolute',
-        right:-120,
-        top:-33
-    }
+        fontWeight: 700,
+        position: 'absolute',
+        right: -120,
+        top: -33
+    },
+
+    registerBtn:{
+        backgroundColor:'#0d6efd',
+        width: 340,
+        height: 48,
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 40
+    },
+
+    registerText:{
+        fontSize: 14,
+        fontFamily: 'Poppins',
+        color: '#fff',
+        fontWeight: 600
+    },
+
+    login:{
+        display:'flex',
+        flexDirection:'row',
+        gap:85,
+        marginTop:25
+    },
+
+    loginDisc:{
+        color:'#333',
+        fontWeight:600,
+        fontSize:14,
+        fontFamily:'Poppins'
+    },
+
+    loginText:{
+        color:'#0d6efd',
+        fontWeight:600,
+        fontSize:14,
+        fontFamily:'Poppins',
+    },
 })
