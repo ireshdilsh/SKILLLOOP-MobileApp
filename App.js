@@ -1,9 +1,9 @@
-import RegisterScreen from './screens/RegisterScreen';
+import MainScreen from './screens/MainScreen';
 
 export default function App() {
   return (
     // <View>
-      <RegisterScreen/>
+      <MainScreen/>
     // </View>
   );
 }
