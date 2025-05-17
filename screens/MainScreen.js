@@ -8,7 +8,7 @@ export default function MainScreen() {
         colors={['#00c6ff', '#0072ff']}
         style={styles.container}
       >
-        <Text style={styles.title}>Main Screen</Text>
+        <Text style={styles.title}>Landing Page</Text>
       </LinearGradient>
     </View>
   )
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     color: '#fff',
-    fontFamily: 'open-sans-bold',
+    fontFamily: 'Consolas',
   },
 
   container:{
