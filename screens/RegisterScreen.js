@@ -1,10 +1,15 @@
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
+import { Video } from 'expo-av'
 
 export default function RegisterScreen() {
   return (
     <View>
-      <Text>RegisterScreen</Text>
+    
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  
+})

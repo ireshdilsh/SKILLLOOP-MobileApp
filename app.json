@@ -25,15 +25,15 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins":[
+    "plugins": [
       [
         "expo-font",
         {
-          "fonts":[
+          "fonts": [
             "this for has add fonts.ttf file path"
           ],
-          "android":{
-            "fonts":[
+          "android": {
+            "fonts": [
               {
                 "fontFamily": "Inter",
                 "fontDefinitions": [
@@ -50,7 +50,7 @@
               }
             ]
           }
-        } 
+        }
       ]
     ]
   }
