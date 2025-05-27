@@ -1,31 +1,39 @@
-import { View, Text, TouchableOpacity } from 'react-native';
-import { Video } from 'expo-av';
-import { useRef } from 'react';
-import { LinearGradient } from 'expo-linear-gradient';
+import React, { Component } from 'react'
+import { Image, StyleSheet, Text, View } from 'react-native'
 
-export default function MainScreen() {
-  const videoRef = useRef(null);
-
-  return (
-    <View style={{ height: '100%', width: '100%' }}>
-      <Video
-        ref={videoRef}
-        source={require('../assets/hero-video.mp4')}
-        style={{ height: '100%', width: '100%' }}
-        useNativeControls={false}
-        resizeMode="cover"
-        isLooping
-        shouldPlay
-      />
-      <LinearGradient colors={['#fff', 'transparent']} style={{ height: '100%', width: '100%', position: 'absolute', padding: 40 }}>
-        <Text style={{ fontSize: 16, marginTop: 390, fontWeight: 700, color: '#fff' }}>Your Journey, Your Way_</Text>
-        <Text style={{ color: '#fff', fontSize: 36, fontWeight: 800 }}>Explore the World</Text>
-        <Text style={{ color: '#fff', fontSize: 36, fontWeight: 800 }}>with Confidence</Text>
-        <Text style={{ color: '#fff', textAlign: 'justify', marginTop: 8 }}>From sun-soaked beaches to mountain escapes, we offer personalized travel experiences and unforgettable memories.</Text>
-        <TouchableOpacity style={{ marginTop: 55, justifyContent: 'center', alignItems: 'center', backgroundColor: '#0d6efd', height: 48, borderRadius: 5 }}>
-          <Text style={{ color: '#fff', fontSize: 14, fontWeight: 600 }}>Get Stated</Text>
-        </TouchableOpacity>
-      </LinearGradient>
-    </View>
-  );
+export default class MainScreen extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Image style={styles.logo} source={require('../assets/logo.png')}></Image>
+        <Text style={styles.title}>Connect Through</Text>
+        <Text style={styles.title}>Book Swapping</Text>
+        <Text style={styles.discription}>A simple app to swap books with nearby readers.</Text>
+      </View>
+    )
+  }
 }
+
+const styles = StyleSheet.create({
+  
+  container:{
+    height:'100%',
+    width:'100%',
+    backgroundColor:'#fff',
+    padding:30,
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  
+  logo:{
+    marginTop:50,
+    height:100
+  },
+
+  title:{
+    color:'#333',
+    fontSize:30,
+    fontWeight:700,
+  }
+})
