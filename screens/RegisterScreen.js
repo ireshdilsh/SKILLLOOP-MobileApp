@@ -1,6 +1,11 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 
 export default function RegisterScreen({ navigation }) {
+
+  const gotoContinueWithEmailPage = () => {
+    navigation.navigate('ContinueEmail')
+  }
+
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={require('../assets/logo.png')}></Image>
@@ -8,7 +13,7 @@ export default function RegisterScreen({ navigation }) {
       <Text style={styles.discription}>Sign up to swap books and connect with fellow readers.</Text>
       <View style={styles.btns}>
         <TouchableOpacity style={styles.googleBtn}><Text style={styles.googleText}>Continue with Google</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.emailBtn}><Text style={styles.emailText}>Continue with Email</Text></TouchableOpacity>
+        <TouchableOpacity onPress={gotoContinueWithEmailPage} style={styles.emailBtn}><Text style={styles.emailText}>Continue with Email</Text></TouchableOpacity>
       </View>
     </View>
   )
