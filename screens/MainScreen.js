@@ -1,19 +1,22 @@
 import React, { Component } from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
-export default class MainScreen extends Component {
-  render() {
+export default function MainScreen ({navigation}) {
+
+  const gotoRegisterScreen = () =>{
+    navigation.navigate('Register')
+  }
+
     return (
       <View style={styles.container}>
         <Image style={styles.logo} source={require('../assets/logo.png')}></Image>
         <Text style={styles.titleOne}>Connect Through</Text>
         <Text style={styles.title}>Book Swapping</Text>
         <Text style={styles.discription}>A simple app to swap books with nearby readers.</Text>
-        <TouchableOpacity style={styles.btn}><Text style={styles.btntitle}>Get Started</Text></TouchableOpacity>
+        <TouchableOpacity onPress={gotoRegisterScreen} style={styles.btn}><Text style={styles.btntitle}>Get Started</Text></TouchableOpacity>
       </View>
     )
   }
-}
 
 const styles = StyleSheet.create({
 
@@ -41,7 +44,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins',
     marginTop: 150
   },
-
 
   title: {
     color: '#333',
