@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     width: 300,
     position:'absolute',
     left:45,
-    top:100
+    top:80
   },
 
   titleOne: {
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 36,
     fontWeight: 800,
     fontFamily: 'Poppins',
-    marginTop: 150
+    marginTop: 120
   },
 
   title: {
