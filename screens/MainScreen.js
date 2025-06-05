@@ -3,6 +3,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 export default function MainScreen ({navigation}) {
 
+  // navigate between screens
   const gotoRegisterScreen = () =>{
     navigation.navigate('Register')
   }
